@@ -1,7 +1,7 @@
+import { useState } from "react";
 import "./App.css";
 import Timer from "./Components/Timer";
 import { ThemeContext } from "./Context/ThemeContext";
-import useLocalStorage from "./Hooks/useLocalStorage";
 
 export const themes = {
   light: {
@@ -13,10 +13,10 @@ export const themes = {
 };
 
 export default function App() {
-  const [theme, setTheme] = useLocalStorage(false);
+  const [theme, setTheme] = useState(false);
 
   return (
-    <div>
+    <div className="App">
       <ThemeContext.Provider value={{ themes, theme, setTheme }}>
         <Timer />
       </ThemeContext.Provider>

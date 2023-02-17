@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Timer = () => {
   const [count, setCount] = useState(0);
@@ -32,7 +32,7 @@ const Timer = () => {
       <div>{Time(count)}</div>
 
       <div>
-        <button onClick={handleStart}>{boolean ? "Stop" : "Start"}</button>
+        <button>{boolean ? "Stop" : "Start"}</button>
       </div>
     </div>
   );
